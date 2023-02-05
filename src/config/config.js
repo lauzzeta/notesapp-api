@@ -24,6 +24,9 @@ module.exports = {
     host: process.env.host,
     dialect: process.env.dialect,
     dialectOptions: {
+      options: {
+        requestTimeout: 50000,
+      },
       ssl: {
         require: true,
         rejectUnauthorized: false,

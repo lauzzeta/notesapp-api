@@ -4,6 +4,9 @@ const dialectOptions =
   process.env.environment === "development"
     ? {}
     : {
+        options: {
+          requestTimeout: 50000,
+        },
         ssl: {
           require: true,
           rejectUnauthorized: false,
